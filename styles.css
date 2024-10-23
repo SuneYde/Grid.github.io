@@ -1,0 +1,142 @@
+body {
+    font-family: poppins;
+    color: var(--Grey-1);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 85px 40px;
+}
+    
+:root {
+    --Grey-1: #4D4F62
+}
+
+
+header .header_title h1 {
+    color: #4D4F62;
+    font-family: Poppins;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.167px;
+    text-align: center;
+    margin: 0;
+}
+
+header .header_subtitle h1 {
+    color: #4D4F62;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.167px;
+    margin: 0;
+}
+
+header .header_paragraph {
+    font-size: 1.3rem;
+    text-align: center;
+    opacity: 0.5;
+}
+
+header {
+    word-wrap: break-word;
+}
+
+.supervisor {
+    border-radius: .5rem;
+    padding: 1rem 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 1rem 2rem .5rem #dedede;
+    border-top: .5rem solid hsl(180, 62%, 55%);
+}
+
+.team-builder {
+    border-radius: .5rem;
+    padding: 2.5rem 3rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 1rem 2rem .5rem #dedede;
+    border-top: .5rem solid hsl(0, 78%, 62%);
+}
+
+.calculator {
+    border-radius: .5rem;
+    padding: 2.5rem 3rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 1rem 2rem .5rem #dedede;
+    border-top: .5rem solid hsl(212, 86%, 64%);
+}
+
+.karma {
+    border-radius: .5rem;
+    padding: 2.5rem 3rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 1rem 2rem .5rem #dedede;
+    border-top: .5rem solid hsl(34, 97%, 64%);
+}
+
+
+.card-image {
+    padding-top: 3rem;
+    display: flex;
+    justify-self: right;
+    width: 75px;
+    height: 75px;
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width: 680px) {
+    .header_paragraph {
+        font-size: 1.4rem;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;       
+    }
+}
+
+@media (min-width: 1250px) {
+    .container {
+        margin: 80px 350px;
+    }
+    .header-paragraph {
+        font-size: 1.3rem;
+    }
+    
+    main {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "start mid1 end"
+        "start mid2 end";       
+    }
+
+
+    .supervisor  {
+        grid-area: start;
+        align-self: center;
+    }
+
+    .team-builder {
+        grid-area: mid1;
+    }
+    .karma {
+        grid-area: mid2;
+    }
+    .calculator {
+        grid-area: end;
+        align-self: center;
+    }
+
+}
